@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var loadSentence = function(sentence_id){
+
+	$.ajax({
+		url:"/sentences/show",
+		method:'GET',
+    	data: { id: sentence_id },
+		success: function(data){
+			$("#right").html(data["body"])
+		}
+	});
+};
+$(document).ready(function(){
+
+	$('#sentence_list li').click(function() {
+
+		loadSentence($(this).attr('id'))
+	});
+});
