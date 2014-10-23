@@ -32,4 +32,5 @@ $(document).ready(function(){
 
 		loadSentence($(this).attr('id'))
 	});
+	alert('some-unique-string');
 });
