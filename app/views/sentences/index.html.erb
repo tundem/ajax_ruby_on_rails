@@ -1,13 +1,19 @@
-<div id="left">
-	<ul id="sentence_list" >
-	<% @sentences.each do |f| %>
-		<li id=" <%= f.id %>" >
-			<%= f.body %>
-
-		</li>
+<div id="add_sentence">
+	<%= form_for @sentence, { controller:"sentences", action:"create" } do |f| %>
+		<%= f.text_field :body %>
+		<%= f.submit "Add Sentence" %>
 	<% end %>
+</div>
+
+<div id="left">
+	<ul id="sentence_list">
+		<% @sentences.each do |f| %>
+			<li id="<%= f.id %>" >
+				<%= f.body %>
+			</li>
+		<% end %>
 	</ul>
 </div>
 <div id="right">
-	mjjllh
+	
 </div>

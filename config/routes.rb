@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to:'sentences#index'
   
   get 'sentences/show'
-
+  resources :sentences
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
